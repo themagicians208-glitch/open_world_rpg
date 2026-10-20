@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Meridian: Wild Frontier"
+config/description="A third-person open-world action RPG test world with a new beacon landmark"
+run/main_scene="res://scenes/game/Game.tscn"
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+EventBus="*res://src/Meridian/Core/EventBusNode.cs"
+GameDirector="*res://src/Meridian/Core/GameDirectorNode.cs"
+SaveService="*res://src/Meridian/Core/Save/SaveServiceNode.cs"
+InputContextService="*res://src/Meridian/Input/InputContextServiceNode.cs"
+WorldClock="*res://src/Meridian/Environment/WorldClockNode.cs"
+WeatherSystem="*res://src/Meridian/Environment/WeatherSystemNode.cs"
+AudioDirector="*res://src/Meridian/Audio/AudioDirectorNode.cs"
+
+[dotnet]
+
+project/assembly_name="Meridian"
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "purple",
+"res://assets/": "green",
+"res://data/": "yellow",
+"res://scenes/": "blue",
+"res://src/": "red",
+"res://tests/": "teal"
+}
+
+[input]
+
+console_toggle={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":96,"location":0,"echo":false,"script":null)
+]
+}
